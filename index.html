@@ -20,25 +20,20 @@
 
 </head>
 
-<body>
+<body class="container-fluid p-0">
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div class="container-fluid">
-
-    <header class="header row">
-      <div class="col-4 logo">
-        <img src="img/essaie logo.png" alt="logo" width="50px">
-      </div>
-
-      <nav class=" col-8 col-md-5 navbar navbar-expand-lg navbar-light offset-md-5 ">
+  <header class="container-fluid p-0 position-fixed ">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <a href="#"><img class="logo" src="img/essaie logo.png" alt="logo" width="50px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav text-right">
             <li class="nav-item">
               <a class="nav-link" href="#">A propos<span class="sr-only">(current)</span></a>
             </li>
@@ -51,17 +46,62 @@
           </ul>
         </div>
       </nav>
+  </header>
+<!-- A bouger -->
+  <section class="essai">
+    <h1 class="p-3 ">Je sais pas encore quoi mettre</h1>
+  </section>
 
-    </header>
-  </div>
+  <main class="container">
 
-  <div class="fond">
-    <img src="img/fond.png" alt="fond d'essaie">
-  </div>
 
-  <div class="container">
-    <h1></h1>
-  </div>
+    <section class="">
+      <article>
+        <div class="">
+          <h2>A propos de moi:</h2>
+          <img src="" alt="photo de moi">
+        </div>
+
+        <p>Ayant eu un bac en Illustration, j'ai voulu chercher une autre voie qui me plaît. J'ai alors découvert le développement web et c'est là que j'ai chercher à devenir developpeur web</p>
+      </article>
+
+    </section>
+    <section class="production">
+      <article>
+        <h2>Mes réalisations</h2>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </article>
+    </section>
+    <section class="contact">
+      <h2></h2>
+      <form class="" action="index.html" method="post">
+
+      </form>
+    </section>
+  </main>
+
+
+
 
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

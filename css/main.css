@@ -97,65 +97,31 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
-.container-fluid {
-  background: transparent;
-  padding: 0;
+header {
+  z-index: 999;
 }
 
-.header {
+.logo {
+  background: rgba(138, 17, 123, 0.5);
+}
+
+article img {
+  height: 100vh;
   width: 100%;
-  margin: 0;
-  height: 85px;
 }
 
-.logo, .navbar {
-  background: white
-  ;
-  box-shadow: 0 0 5px white;
-}
-
-
-.logo img{
-  background: #8a117b;
-  box-shadow: 0 2px 5px #8a117b;
-  height: 70px;
-  width: 70px;
-  border-radius: 40px;
-  padding: 4px;
-  transition: 0.5s ease;
-}
-
-.logo img:hover {
-  width: 80px;
-  height: 80px;
-  border-radius: 100px;
-}
-
-.navbar {
-  justify-content: flex-end;
-}
-
-.navbar-light .navbar-nav .nav-link {
-  color: green ;
-}
-
-header > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-
-
-.fond img{
+.essai {
+  overflow: hidden;
   width: 100%;
   height: 100vh;
+  background: url("../img/fond.png") center no-repeat;
+  background-size: 100vh;
 }
 
-
-
+.essai h1 {
+  margin-top: 40vh;
+  background: rgba(255,255,255,0.5);
+}
 
 
 
