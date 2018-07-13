@@ -105,10 +105,7 @@ header {
   background: rgba(138, 17, 123, 0.5);
 }
 
-article img {
-  height: 100vh;
-  width: 100%;
-}
+
 
 .essai {
   overflow: hidden;
@@ -124,9 +121,55 @@ article img {
 }
 
 
+/* Conteneur principal */
+.overlay-image {
+ position: relative;
+ width: 100%;
+}
+
+/* Image originale */
+.overlay-image .image {
+ display: block;
+ width: 100%;
+ height: auto;
+}
+
+/* Texte original */
+.overlay-image .text {
+ color: #fff;
+ font-size: 30px;
+ line-height: 1.5em;
+ text-shadow: 2px 2px 2px #000;
+ text-align: center;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 100%;
+}
+
+/********* Hover image et texte *******/
+
+/* Overlay */
+.overlay-image .hover {
+ position: absolute;
+ top: 0;
+ height: 100%;
+ width: 100%;
+ opacity: 0;
+ transition: .5s ease;
+}
+
+/* Apparition overlay sur passage souris */
+.overlay-image:hover .hover {
+ opacity: 1;
+}
 
 
 
+.overlay-image .hover {
+ background-color: rgba(0,0,0,0.5);
+}
 
 
 
