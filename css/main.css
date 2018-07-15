@@ -107,12 +107,12 @@ h1, h2, h3 {
 }
 
 header {
-  background: linear-gradient(white, #BF55EC, #9B59B6, #F03434);
+  background: linear-gradient( #BF55EC, #9B59B6, #F03434);
   height: 100vh;
 }
 
 .navbar > a {
-  padding-right: 50%;
+  padding-right: 40%;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -136,7 +136,8 @@ header {
   text-align: center;
   color: antiquewhite;
   border-radius: 3px;
-  margin: 20vh auto;
+  margin: 20vh auto 0 auto;
+  align-self: baseline;
 }
 
 
@@ -151,6 +152,10 @@ header {
  display: block;
  width: 100%;
  height: auto;
+}
+
+section {
+  overflow: hidden;
 }
 
 /* Texte original */
