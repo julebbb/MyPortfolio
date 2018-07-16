@@ -52,14 +52,14 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-127)">
+     transform="translate(0,-227)">
     <rect
-       style="opacity:1;fill:#9B59B6;paint-order:stroke fill markers;fill-opacity:1"
+       style="opacity:1;fill:antiquewhite;paint-order:stroke fill markers;fill-opacity:1"
        id="rect4522"
        width="1250"
        height="53.149799"
        x="-300"
-       y="158.995"
+       y="265.99548"
        transform="matrix(0.99841816,-0.05622434,0.06856744,0.99764648,0,0)" />
   </g>
 </svg>
