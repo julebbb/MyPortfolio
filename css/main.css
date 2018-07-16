@@ -112,12 +112,21 @@ header {
   flex-direction: column;
 }
 
+.bars-top {
+  display: flex;
+}
+
 .navbar > a {
   padding-right: 35%;
 }
 
 .navbar {
   width: 100%;
+}
+
+.bars-top {
+  width: 100%;
+  justify-content: space-between;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -127,7 +136,7 @@ header {
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: purple;
+  color: #f03434;
 
 }
 
