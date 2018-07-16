@@ -116,13 +116,12 @@ header {
   flex-direction: column;
 }
 
-.bars-top {
+.bars-top, .nav-link {
   display: flex;
 }
 
-.bar-top img{
-  width: 50%;
-  max-width: 200px;
+.logo{
+  max-width: 150px;
 }
 
 .circle {
@@ -155,6 +154,14 @@ header {
 .navbar-light .navbar-nav .nav-link:hover {
   color: #f03434;
 
+}
+
+.navbar-nav, .nav-items, .nav-link {
+  height: 100%;
+}
+
+.nav-link {
+  align-items: center;
 }
 
 .fa-bars, .navbar-light .navbar-nav .nav-link {
@@ -306,6 +313,13 @@ section {
 
 .overlay-image .hover {
  background-color: rgba(0,0,0,0.5);
+}
+
+input, textarea {
+  display: block;
+  margin: 19px auto;
+  width: 80%;
+  padding: 10px;
 }
 
 
