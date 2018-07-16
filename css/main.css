@@ -97,6 +97,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Shadows+Into+Light');
+@keyframes rotaterev {
+  from {transform: rotate(0);}
+  to { transform: rotate(-360deg);}
+}
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -114,6 +118,19 @@ header {
 
 .bars-top {
   display: flex;
+}
+
+.bar-top img{
+  width: 50%;
+  max-width: 200px;
+}
+
+.circle {
+  position: absolute;
+  left: 20px;
+  top: -49px;
+  animation: 10s linear infinite rotaterev;
+  transition: 2s ease-in;
 }
 
 .navbar > a {
@@ -179,6 +196,11 @@ header {
 
 .aboutMe {
   background: antiquewhite;
+  height: 100%;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+
 }
 
 .aboutMe article, header {
@@ -190,9 +212,12 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin: 0 auto   28px  auto;
+
+
 }
 
-.aboutMe article div, .aboutMe article, .aboutMe img {
+.aboutMe article div, .aboutMe img {
   margin: auto;
 }
 
@@ -210,10 +235,23 @@ header {
   border: 3px dotted antiquewhite;
   padding: 4px;
   color: antiquewhite;
+  text-align: center;
 }
 
 .aboutMe img {
   display: block;
+}
+
+.aboutMe > img {
+  width: 100%;
+}
+
+section {
+  overflow: hidden;
+}
+
+.production {
+  background: #c098ff;
 }
 
 /* Conteneur principal */
@@ -229,9 +267,7 @@ header {
  height: auto;
 }
 
-section {
-  overflow: hidden;
-}
+
 
 
 
@@ -272,6 +308,8 @@ section {
  background-color: rgba(0,0,0,0.5);
 }
 
+
+
 /*-------------------------------
 ------------Responsive------------
 --------------------------------*/
@@ -285,6 +323,22 @@ section {
  header {
    background: url("../img/fond-768px.png") fixed no-repeat black center;
 
+ }
+
+ .aboutMe article {
+   flex-direction: row;
+   border-left: 1px solid #f03434;
+   border-right: 1px solid #f03434;
+ }
+
+ .aboutMe div {
+   width: 36%;
+
+ }
+
+ .aboutMe p {
+   width: 56%;
+   align-self: center;
  }
  }
 

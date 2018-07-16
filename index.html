@@ -32,7 +32,11 @@
   <header class="container-fluid p-0">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="bars-top">
-          <a href="#"><img class="logo" src="img/kima.png" alt="logo" width="100px"></a>
+          <a href="#"><img class="logo" src="img/kima.png" alt="logo" style="width:100px;"></a>
+          <svg class="circle" height="206" width="100">
+            <circle cx="90" cy="150" r="2" stroke="black" stroke-width="1" fill="antiquewhite" />
+            <circle cx="96" cy="12" r="3" stroke="black" stroke-width="1" fill="antiquewhite" />
+          </svg>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
           </button>
@@ -40,13 +44,13 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav text-right">
             <li class="nav-item">
-              <a class="nav-link" href="#">A propos<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#aboutMe">A propos<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Mes réalisations</a>
+              <a class="nav-link" href="#production">Mes réalisations</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -54,24 +58,26 @@
 
       <section class="welcome row">
         <h1 class="p-3 ">Bienvenue sur mon portfolio</h1>
-        <img src="img/rectAboutMe.svg" alt="essai">
+        <img src="img/rectAboutMe.svg" alt="rectangle de séparation">
       </section>
 
   </header>
 
   <main>
 
-    <div class="aboutMe">
+    <div class="aboutMe" id="aboutMe">
       <article>
-        <div class="">
+        <div >
           <h2>A propos de moi</h2>
           <img src="img/moi.png" alt="photo de moi" style="width: 150px;">
         </div>
         <p>Ayant eu un bac en Illustration, j'ai voulu chercher une autre voie qui me plaît. J'ai alors découvert le développement web et c'est là que j'ai chercher à devenir developpeur web</p>
       </article>
+      <img src="img/dessin-1.svg" alt="">
 
     </div>
-    <div class="production">
+    <div class="production" id="production">
+
       <article>
         <h2>Mes réalisations</h2>
 
@@ -85,7 +91,7 @@
       </article>
     </div>
 
-    <section class="contact">
+    <section class="contact" id="contact">
       <h2>Pour me contacter</h2>
       <form class="" action="index.html" method="post">
         <input type="text" name="nom" placeholder="Nom et prénom*" required>
