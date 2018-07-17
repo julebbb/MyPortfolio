@@ -97,6 +97,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Shadows+Into+Light');
+
 @keyframes rotaterev {
   from {transform: rotate(0);}
   to { transform: rotate(-360deg);}
@@ -116,8 +117,20 @@ header {
   flex-direction: column;
 }
 
-.bars-top, .nav-link {
+.bars-top, .nav-link, .aboutMe,.aboutMe article, header, footer    {
   display: flex;
+}
+
+.aboutMe img, .overlay-image .image, input, textarea {
+  display: block;
+}
+
+.aboutMe article div, .aboutMe img, .detail, .production h2 {
+  margin: auto;
+}
+
+.contact h2, form, .production h2, .fa-bars {
+  border-radius: 5px;
 }
 
 .logo{
@@ -136,12 +149,15 @@ header {
   padding-right: 35%;
 }
 
-.navbar {
+.aboutMe article, .overlay-image .hover, .overlay-image, .overlay-image .text, .overlay-image .image,  .detail, .navbar, .bars-top, .welcome, .welcome img, .aboutMe > img  {
   width: 100%;
 }
 
+.navbar-nav, .nav-items, .overlay-image .hover, .aboutMe, .nav-link, .welcome  {
+  height: 100%;
+}
+
 .bars-top {
-  width: 100%;
   justify-content: space-between;
 }
 
@@ -156,10 +172,6 @@ header {
 
 }
 
-.navbar-nav, .nav-items, .nav-link {
-  height: 100%;
-}
-
 .nav-link {
   align-items: center;
 }
@@ -172,7 +184,6 @@ header {
   font-size: 30px;
   padding: 8px 15px;
   border: 1px solid #c9c7c8;
-  border-radius: 5px;
 }
 
 .navbar-collapse {
@@ -181,51 +192,37 @@ header {
 
 .welcome {
   overflow: hidden;
-  width: 100%;
-  height: 100%;
   margin: 0;
   align-content: space-between;
 }
 
 .welcome h1 {
   text-align: center;
-  color: antiquewhite;
   border-radius: 3px;
   margin: 20vh auto 0 auto;
   align-self: baseline;
 }
 
-.welcome img {
-  width: 100%;
+.welcome img, .aboutMe > img {
   height: 130px;
+}
+
+
+.welcome img {
   align-self: flex-end;
 }
 
 .aboutMe {
   background: antiquewhite;
-  height: 100%;
-  display: flex;
   align-content: space-between;
   flex-wrap: wrap;
 
 }
 
-.aboutMe article, header, footer {
-  display: flex;
-}
-
 .aboutMe article {
   max-width: 820px;
-  width: 100%;
-  display: flex;
   flex-direction: column;
-  margin: 0 auto   28px  auto;
-
-
-}
-
-.aboutMe article div, .aboutMe img {
-  margin: auto;
+  margin: 0 auto 28px auto;
 }
 
 .aboutMe article p {
@@ -235,23 +232,22 @@ header {
 
 .aboutMe article h2 {
   transform: rotate(-4deg);
-  background: #f03434;
   position: relative;
   top: 26px;
   right: 6px;
   border: 3px dotted antiquewhite;
   padding: 4px;
-  color: antiquewhite;
   text-align: center;
 }
 
-.aboutMe img {
-  display: block;
+.aboutMe article h2,.contact h2, .production h2  {
+  background: #f03434;
 }
 
-.aboutMe > img {
-  width: 100%;
+.aboutMe article h2, .production h2, .welcome h1 {
+  color: antiquewhite;
 }
+
 
 section {
   overflow: hidden;
@@ -261,24 +257,29 @@ section {
   background: #c098ff;
 }
 
+.production h2 {
+  text-align: center;
+  padding: 5px;
+  width: 210px;
+
+}
+
+.detail  {
+  max-width: 400px;
+  padding: 10px;
+}
+
 /* Conteneur principal */
 .overlay-image {
  position: relative;
- width: 100%;
 }
 
-/* Image originale */
+/* Original picture */
 .overlay-image .image {
- display: block;
- width: 100%;
  height: auto;
 }
 
-
-
-
-
-/* Texte original */
+/* Original text */
 .overlay-image .text {
  color: #fff;
  font-size: 30px;
@@ -289,7 +290,6 @@ section {
  top: 50%;
  left: 50%;
  transform: translate(-50%, -50%);
- width: 100%;
 }
 
 /********* Hover image et texte *******/
@@ -298,8 +298,6 @@ section {
 .overlay-image .hover {
  position: absolute;
  top: 0;
- height: 100%;
- width: 100%;
  opacity: 0;
  transition: .5s ease;
 }
@@ -308,8 +306,6 @@ section {
 .overlay-image:hover .hover {
  opacity: 1;
 }
-
-
 
 .overlay-image .hover {
  background-color: rgba(0,0,0,0.5);
@@ -322,9 +318,7 @@ section {
 .contact h2 {
   width: 236px;
   margin: 10px auto;
-  background: #f03434;
   padding: 8px;
-  border-radius: 5px;
   color: white;
 }
 
@@ -333,10 +327,8 @@ form {
   max-width: 800px;
   margin: 20px auto;
   padding: 5px;
-  border-radius: 5px;
 }
 input, textarea {
-  display: block;
   margin: 19px auto;
   width: 80%;
   padding: 10px;
@@ -360,17 +352,11 @@ footer .fab {
 ------------Responsive------------
 --------------------------------*/
 
-
-/* Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap*/
-
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
  header {
    background: url("../img/fond-768px.png") fixed no-repeat black center;
-
  }
-
 
  .aboutMe article {
    flex-direction: row;
@@ -380,7 +366,6 @@ footer .fab {
 
  .aboutMe div {
    width: 36%;
-
  }
 
  .aboutMe p {
@@ -389,7 +374,7 @@ footer .fab {
  }
 
  .contact {
-   background: url("../img/fond-contact-768px.png")
+   background: url("../img/fond-contact-768px.png") fixed no-repeat bottom;
  }
  }
 
@@ -400,8 +385,7 @@ footer .fab {
   }
 
   .contact {
-    background: url("../img/fond-contact-992px.png")
-
+    background: url("../img/fond-contact-992px.png") fixed no-repeat bottom;
   }
  }
 
@@ -434,7 +418,7 @@ footer .fab {
   }
 
   .contact {
-    background: url("../img/fond-contact-1200px.png")
+    background: url("../img/fond-contact-1200px.png") fixed no-repeat bottom;
 
   }
 }
