@@ -319,9 +319,20 @@ section {
   background: url("../img/fond-contact-576px.png") no-repeat bottom black fixed;
 }
 
+.contact h2 {
+  width: 236px;
+  margin: 10px auto;
+  background: #f03434;
+  padding: 8px;
+  border-radius: 5px;
+  color: white;
+}
+
 form {
   background: rgba(255, 255, 255 ,0.3);
-  margin: 15px;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 5px;
   border-radius: 5px;
 }
 input, textarea {
@@ -360,6 +371,7 @@ footer .fab {
 
  }
 
+
  .aboutMe article {
    flex-direction: row;
    border-left: 1px solid #f03434;
@@ -375,12 +387,20 @@ footer .fab {
    width: 56%;
    align-self: center;
  }
+
+ .contact {
+   background: url("../img/fond-contact-768px.png")
+ }
  }
 
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
   header {
     background: url("../img/fond-992px.png") fixed no-repeat black center;
+  }
+
+  .contact {
+    background: url("../img/fond-contact-992px.png")
 
   }
  }
@@ -389,7 +409,6 @@ footer .fab {
 @media (min-width: 992px) {
   header {
     background: url("../img/fond-1200px.png") fixed no-repeat black center;
-
   }
 
   .navbar-collapse {
@@ -413,6 +432,11 @@ footer .fab {
   .welcome h1 {
       margin: 30vh auto 0 auto;
   }
+
+  .contact {
+    background: url("../img/fond-contact-1200px.png")
+
+  }
 }
 
 
@@ -422,6 +446,11 @@ footer .fab {
 @media (min-width: 1200px) {
   header {
     background: url("../img/fond.png") fixed no-repeat black center;
+
+  }
+
+  .contact {
+    background: url("../img/fond-contact.png")
 
   }
 
