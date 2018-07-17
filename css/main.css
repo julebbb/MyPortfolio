@@ -116,13 +116,12 @@ header {
   flex-direction: column;
 }
 
-.bars-top {
+.bars-top, .nav-link {
   display: flex;
 }
 
-.bar-top img{
-  width: 50%;
-  max-width: 200px;
+.logo{
+  max-width: 150px;
 }
 
 .circle {
@@ -152,9 +151,17 @@ header {
   font-size: 20px;
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:hover, footer .fab:hover {
   color: #f03434;
 
+}
+
+.navbar-nav, .nav-items, .nav-link {
+  height: 100%;
+}
+
+.nav-link {
+  align-items: center;
 }
 
 .fa-bars, .navbar-light .navbar-nav .nav-link {
@@ -203,7 +210,7 @@ header {
 
 }
 
-.aboutMe article, header {
+.aboutMe article, header, footer {
   display: flex;
 }
 
@@ -308,6 +315,45 @@ section {
  background-color: rgba(0,0,0,0.5);
 }
 
+.contact {
+  background: url("../img/fond-contact-576px.png") no-repeat bottom black fixed;
+}
+
+.contact h2 {
+  width: 236px;
+  margin: 10px auto;
+  background: #f03434;
+  padding: 8px;
+  border-radius: 5px;
+  color: white;
+}
+
+form {
+  background: rgba(255, 255, 255 ,0.3);
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 5px;
+  border-radius: 5px;
+}
+input, textarea {
+  display: block;
+  margin: 19px auto;
+  width: 80%;
+  padding: 10px;
+}
+
+footer {
+  justify-content: center;
+}
+
+footer a {
+  padding: 20px;
+}
+footer .fab {
+  font-size: 40px;
+  color: black;
+  transition: 0.5s ease-in;
+}
 
 
 /*-------------------------------
@@ -325,6 +371,7 @@ section {
 
  }
 
+
  .aboutMe article {
    flex-direction: row;
    border-left: 1px solid #f03434;
@@ -340,12 +387,20 @@ section {
    width: 56%;
    align-self: center;
  }
+
+ .contact {
+   background: url("../img/fond-contact-768px.png")
+ }
  }
 
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
   header {
     background: url("../img/fond-992px.png") fixed no-repeat black center;
+  }
+
+  .contact {
+    background: url("../img/fond-contact-992px.png")
 
   }
  }
@@ -354,7 +409,6 @@ section {
 @media (min-width: 992px) {
   header {
     background: url("../img/fond-1200px.png") fixed no-repeat black center;
-
   }
 
   .navbar-collapse {
@@ -378,6 +432,11 @@ section {
   .welcome h1 {
       margin: 30vh auto 0 auto;
   }
+
+  .contact {
+    background: url("../img/fond-contact-1200px.png")
+
+  }
 }
 
 
@@ -387,6 +446,11 @@ section {
 @media (min-width: 1200px) {
   header {
     background: url("../img/fond.png") fixed no-repeat black center;
+
+  }
+
+  .contact {
+    background: url("../img/fond-contact.png")
 
   }
 
