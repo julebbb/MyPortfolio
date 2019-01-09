@@ -13,41 +13,31 @@
         crossorigin="anonymous">
     <!-- Place favicon.ico in the root directory -->
     <!--32x32 le favicon -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
 
 </head>
 
-<body id="body">
+<body class="container-fluid">
     <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
+    <div class="bar"></div>
+
     <!-- Add your site or application content here -->
-    <div class="transition"></div>
-    <header class="">
+    <header class="container">
             
         <!-- <div class="test">
         </div> -->
-        <div class="logoDiv">
-                <a href="kima"><img class="logo" src="img/kima.png" alt="logo" style="width:70%;"></a>
+        <div class="logoDiv row">
+                <a href=""><img class="logo" src="img/kima.png" alt="logo" style="width:70%;"></a>
                 <div>
-                    <svg class="circle" height="200" width="200">
-                        <circle cx="180" cy="150" r="1"  stroke-width="1" fill="antiquewhite" />
-                        <circle cx="0" cy="100" r="2"  stroke-width="1" fill="antiquewhite" />
-                        <circle class="ray" cx="100" cy="100" r="110" stroke="white" stroke-width="1" fill-opacity="0" />
-                        <circle class="rayon" cx="100" cy="100" r="89" stroke="white" stroke-width="0.5" fill-opacity="0" />
-                        <circle cx="178" cy="102" r="3" stroke-width="1" fill="white" />
-                        <circle cx="96" cy="12" r="3"  stroke-width="1" fill="antiquewhite" />
-
-                    </svg>
-                    <svg class="circle reverse" height="200" width="200">
-                        <circle cx="10" cy="50" r="3" stroke-width="5" fill="antiquewhite" />
-                        <circle cx="178" cy="150" r="2" stroke-width="1" fill="white" />
-                        <circle class="ray" cx="100" cy="100" r="120" stroke="white" stroke-width="1" fill-opacity="0" />
-                        <circle cx="70" cy="50" r="2" stroke-width="1" fill="antiquewhite" />
-
-                    </svg>
+                    <img src="img/circle.svg" class="circle" alt="Circle who turn">
+                    <img src="img/circleReverse.svg" class="circle reverse" alt="Circle who turn">
                 </div>
                
                
@@ -55,8 +45,8 @@
 
         <section>
             <div class="line"></div>
-            <h1>Justine Lebbrecht</h1>
-            <p>Développeuse Web Junior</p>
+            <h1 class="text-center">Justine Lebbrecht</h1>
+            <p class="text-center">Développeuse Web Junior</p>
            
                 
                 <ul class="flex">
@@ -74,12 +64,7 @@
             
         </section>
 
-        <div class="transition">
-
-        </div>
-        <div class="transition">
-
-        </div>
+        
     </header>
     <footer>
         <div></div>
@@ -90,13 +75,16 @@
     </footer>
 
   
-
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
     </script>
+    <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.js"></script>
     
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

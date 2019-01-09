@@ -1,402 +1,414 @@
  @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400');
 
-@keyframes rotate {
-    from {
-        transform: rotate(0);
-    }
 
-    to {
-        transform: rotate(-360deg);
-    }
-}
+ /*
+ _____________________________________________________________________________________________
 
-@keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: scale(1.5);
-    }
+  ------------------------------     ANIMATIONS CSS     ------------------------------------
+ _____________________________________________________________________________________________
+ 
+ */
 
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
+ @keyframes rotate {
+     from {
+         transform: rotate(0);
+     }
 
-@keyframes fade-h1 {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
+     to {
+         transform: rotate(-360deg);
+     }
+ }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+ @keyframes fade-in {
+     from {
+         opacity: 0;
+         transform: scale(1.5);
+     }
 
-@keyframes dash {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
+     to {
+         opacity: 1;
+         transform: scale(1);
+     }
+ }
 
-@keyframes trans {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
+ @keyframes fade-down {
+     from {
+         opacity: 0;
+         transform: translateY(-20px);
+     }
 
-@keyframes button{
-    from {
-        transform: scale(0);
-    } to {
-        transform: scale(1);
-    }
-}
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
 
-html {
-    height: 100%;
-    width: 100%;
-    background: rgb(10, 13, 51);
-    display: flex;
-    justify-content: center;
+ @keyframes dash {
+     to {
+         stroke-dashoffset: 0;
+     }
+ }
 
-}
+ @keyframes advent {
+     from {
+         width: 0;
+     }
 
+     to {
+         width: 100%;
+     }
+ }
 
-body {
-    width: 100%;
-    height: 100%;
+ @keyframes button {
+     from {
+         transform: scale(0);
+     }
+
+     to {
+         transform: scale(1);
+     }
+ }
+
+ /*
+ _____________________________________________________________________________________________
+
+  --------------------------------     INDEX PAGE     ---------------------------------------
+ _____________________________________________________________________________________________
+ 
+ */
+
+ body{
+     height: 100%;
+     width: 100%;
+     padding: 0!important;
+ }
+
+ html {
+     width: 100%;
+     height: 100%;
+     background: rgb(10, 13, 51);
+ }
+
+.container {
     margin: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    font-family: 'Roboto',
-    sans-serif;
-    color: white;
-    display: flex;
-   flex-direction: column;
-
-   justify-content: space-between;
-    background:linear-gradient(#5a43d1, #722196, black) no-repeat;
-    max-width: 1200px;
-    box-shadow: 0px 0px 4px #722196;
-    border-right: 1px solid rgb(240, 180, 180);
-    border-left: 1px solid rgb(240, 180, 180);
-
+    padding: 0;
+    margin: auto;
 }
+ body {
+     font-family: 'Roboto', sans-serif;
+     color: white;
+     background: linear-gradient(#5a43d1, #722196, black) no-repeat;
+     max-width: 1200px;
+     display: flex;
+     justify-content: space-between;
+     flex-direction: column;
+ }
+ 
 
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -50%;
-    width: 100%;
-    height: 100%;
-    background: rgba(115, 84, 240, 0.1);
-    transition: 0.5s;
-    transform: skewX(10deg);
-
-    pointer-events: none;
-}
-header {
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-around;
-    height: 100%;
-
-}
-
-header h1 {
+ header h1 {
      font-weight: 200;
      font-size: 2rem;
-     text-align: center;
+     animation: 2s linear fade-down forwards;
+     opacity: 0;
+     animation-delay: 1s;
+ }
 
-     animation: 2s linear fade-h1 forwards;
+ header p {
+     font-weight: 300;
 
      position: relative;
      opacity: 0;
-
-     animation-delay: 1s;
-} 
-
-header p {
-    font-weight: 300;
-
-    text-align: center;
-    position: relative;
-    opacity: 0;
-    color: #f3e7e7;
-     animation: 1s linear fade-h1 forwards;
+     color: #f3e7e7;
+     animation: 1s linear fade-down forwards;
      animation-delay: 2s;
 
 
-}
+ }
 
-.flex {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    margin-top: 10%;
+ .flex {
+     display: flex;
+     justify-content: space-between;
+     height: 80px;
+     margin-top: 10%;
 
-    padding: 0;
-    border-radius: 5px;
+     padding: 0;
+     border-radius: 5px;
 
-    overflow: auto;
-}
+     overflow: auto;
+ }
 
-.flex li {
-    width: 100%;
-    text-align: center;
-    list-style: none;
-    display: flex;
-    overflow: hidden;
-    opacity: 0;
-}
+ .flex li {
+     width: 100%;
+     text-align: center;
+     list-style: none;
+     display: flex;
+     overflow: hidden;
+     opacity: 0;
+ }
 
-.flex a {
-    text-decoration: none;
-    text-align: center;
-    width: 100%;
-    background: rgba(28, 7, 45, 0.5);
-
-
-    vertical-align: middle;
-
-    display: inline-flex;
-
-    justify-content: center;
+ .flex a {
+     text-decoration: none;
+     text-align: center;
+     width: 100%;
+     background: rgba(28, 7, 45, 0.5);
 
 
-    align-items: center;
-    color: #7354f0;
+     vertical-align: middle;
 
-    padding: 3px 6px;
-    transition: 1s all;
+     display: inline-flex;
 
-}
-
-/* Utiliser cette effet pour faire le menu responsive sa serai genial ou transition*/
-.flex a::before, .flex a::after, .transition {
-
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(115, 84, 240, 0.1);
-    transition: 0.5s;
-    pointer-events: none;
-}
-
-.flex a:hover::before {
-    left: -50%;
-    transform: skewX(-10deg);
-}
+     justify-content: center;
 
 
-.flex a:hover::after {
-    left: -40%;
-    transform: skewX(-15deg);
-}
+     align-items: center;
+     color: #7354f0;
 
-.flex a::before:hover {
-    top: 50px;
-    left: 50px;
-    
-}
+     padding: 3px 6px;
+     transition: 1s all;
 
-.flex a:hover {
-    color: white;
-}
+ }
 
-.flex span {
-    position: absolute;
+ /* Utiliser cette effet pour faire le menu responsive sa serai genial ou transition*/
+ .flex a::before,
+ .flex a::after {
 
-    width: 100px;
+     content: '';
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 100%;
+     background: rgba(115, 84, 240, 0.1);
+     transition: 0.5s;
+     pointer-events: none;
+ }
 
-    bottom: 0;
-
-    margin: auto;
-
-    display: block;
-
-}
-
-.flex li:hover {
-    transition: 2s all;
-}
+ .flex a:hover::before {
+     left: -50%;
+     transform: skewX(-10deg);
+ }
 
 
-header section {
-    height: 100%;
+ .flex a:hover::after {
+     left: -40%;
+     transform: skewX(-15deg);
+ }
 
-    margin: 0 15px;
+ .flex a::before:hover {
+     top: 50px;
+     left: 50px;
+
+ }
+
+ .flex a:hover {
+     color: white;
+ }
+
+ .flex span {
+     position: absolute;
+
+     width: 100px;
+
+     bottom: 0;
+
+     margin: auto;
+
+     display: block;
+
+ }
+
+ .flex li:hover {
+     transition: 2s all;
+ }
+
+
+ header section {
+     height: 100%;
+
+     margin: 0 15px;
      animation-delay: 1s;
 
-}
+ }
 
 
-.logoDiv {
+ .logoDiv {
 
 
-    position: relative;
+     position: relative;
 
 
-    
-    width: 315px;
-    display: block;
-    margin:  0 auto;
 
-    animation: 2s linear fade-in;
+     min-height: 200px;
+     display: block;
+     margin: 0 auto;
 
-}
+     animation: 2s linear fade-in;
 
-
-.logoDiv div {
-    position: absolute;
-    top: 0;
-    left: 17%;
-
-}
-.circle {
-    position: absolute;
-
-    left: 17%;
-
-    animation: 30s linear infinite rotate;
-    transition: 1s ease-in;
-    top: 30px;
-}
-
-.logo {
-    max-width: 150px;
-   display: block;
-
-   margin: 15% auto;
-
-}
+ }
 
 
-.reverse {
-    animation-direction: reverse;
-}
+ .logoDiv div {
+     position: absolute;
+     top: 0;
+     left: 17%;
 
-.line {
-    border-top: 1px solid #a99bae;
-    animation: 3s trans linear;
-    margin: auto;
-    display: block;
-}
+ }
 
-.logoDiv a {
-    width: 100%;
+ .circle {
+     position: absolute;
 
-    height: 100%;
-    overflow: hidden;
+     left: 17%;
 
-    position: relative;
-    z-index: 1;
+     animation: 30s linear infinite rotate;
+     transition: 1s ease-in;
+     top: 30px;
+ }
 
+ .logo {
+     max-width: 150px;
+     display: block;
 
-    margin: auto;
+     margin: 15% auto;
 
-    display: block;
-}
-
-.test {
-    border-top: 1px solid white;
-    width: 100px;
-    height: 100px;
-    border-radius: 73px;
-
-    animation: 1s infinite linear rotate;
-}
-
-.ray {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 5s linear forwards;
-}
-
-.rayon {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 7s linear forwards;
-}
+ }
 
 
-.flex li:nth-child(1) {
-    animation: 1s linear fade-h1 forwards;
-    animation-delay: 3s;
+ .reverse {
+     animation-direction: reverse;
+ }
 
-}
+ .line {
+     border-top: 1px solid #a99bae;
+     animation: 3s advent linear;
+     margin: auto;
+     display: block;
+ }
 
-.flex li:nth-child(2) {
-    animation: 1s linear fade-h1 forwards;
-    animation-delay: 3.5s;
+ .logoDiv a {
+     width: 100%;
 
-}
+     height: 100%;
+     overflow: hidden;
 
-.flex li:nth-child(3) {
-    animation: 1s linear fade-h1 forwards;
-    animation-delay: 4s;
-
-}
+     position: relative;
+     z-index: 1;
 
 
-footer {
-    display: flex;
+     margin: auto;
 
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+     display: block;
+ }
 
-}
+ .test {
+     border-top: 1px solid white;
+     width: 100px;
+     height: 100px;
+     border-radius: 73px;
 
-footer div {
-    width: 100%;
+     animation: 1s infinite linear rotate;
+ }
 
-    height: 1px;
+ .ray {
+     stroke-dasharray: 1000;
+     stroke-dashoffset: 1000;
+     animation: dash 5s linear forwards;
+ }
 
-    background: #7e5c8d;
+ .rayon {
+     stroke-dasharray: 1000;
+     stroke-dashoffset: 1000;
+     animation: dash 7s linear forwards;
+ }
 
-    margin: 0 15px;
-    animation: 5s trans linear;
-}
 
-footer a {
-    font-size: 2em;
-    margin: 5px;
-    animation: 2s linear fade-h1 ;
-    transition: 1s ease;
-    color: #7354f0;
+ .flex li:nth-child(1) {
+     animation: 1s linear fade-down forwards;
+     animation-delay: 3s;
 
-}
+ }
 
-footer a:hover {
-    transform: scale(1.2);
-}
+ .flex li:nth-child(2) {
+     animation: 1s linear fade-down forwards;
+     animation-delay: 3.5s;
 
-@media (min-width: 992px) {
-    .flex li {
-        height: 60px;
+ }
+
+ .flex li:nth-child(3) {
+     animation: 1s linear fade-down forwards;
+     animation-delay: 4s;
+
+ }
+
+
+ footer {
+     display: flex;
+
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+
+ }
+
+ footer div {
+     width: 100%;
+
+     height: 1px;
+
+     background: #7e5c8d;
+
+     margin: 0 15px;
+     animation: 5s advent linear;
+ }
+
+ footer a {
+     font-size: 2em;
+     margin: 5px;
+     animation: 2s linear fade-down;
+     transition: 1s ease;
+     color: #7354f0;
+
+ }
+
+ footer a:hover {
+     transform: scale(1.2);
+ }
+
+ .bar {
+     position: fixed;
+     top: 0;
+     right: -50%;
+     width: 100%;
+     height: 100%;
+     background: rgba(115, 84, 240, 0.1);
+     transition: 0.5s;
+     transform: skewX(10deg);
+     pointer-events: none;
+ }
+
+ @media (min-width: 992px) {
+
+     .flex li {
+         height: 60px;
+     }
+
+     header h1 {
+         font-size: 2.5rem;
+     }
+
+     header p {
+         font-size: 1.5rem;
+     }
+
+     .flex {
+         margin-top: 5%;
+     }
+ }
+ 
+ @media (min-width: 1200px) {
+    body {
+            box-shadow: 0px 0px 4px #722196;
+            border-right: 1px solid rgb(240, 180, 180);
+            border-left: 1px solid rgb(240, 180, 180);
     }
-
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    header p {
-        font-size: 1.5rem;
-    }
-
-    .flex {
-        margin-top: 5%;
-    }
-}
+  
+ }
